@@ -5,11 +5,10 @@ app:
   volumes:
     - .:/app
   ports:
-    - 4040:4040
+    - 4000:4000
 
 web:
   extends: app
-  command: bash -c "while [ true ]; do sleep 10; done"
   container_name: web
   environment:
     - USER
@@ -38,3 +37,5 @@ db:
   image: postgres:9.5
   environment:
     - POSTGRES_PASSWORD=postgres
+  ports:
+   - 5432:5432
