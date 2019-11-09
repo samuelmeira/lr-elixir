@@ -3,7 +3,7 @@ app:
   tty: true
   stdin_open: true
   volumes:
-    - .:/app
+    - .:/umbrella
   ports:
     - 4000:4000
 
@@ -22,6 +22,7 @@ web:
 
 tests:
   extends: app
+  container_name: tests
   command: mix do coveralls
   environment:
     - USER

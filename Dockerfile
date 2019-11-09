@@ -12,6 +12,5 @@ RUN mix deps.get
 RUN mix phx.digest
 
 EXPOSE 4000
-EXPOSE 4001
 
 CMD ["mix", "phx.server"]
