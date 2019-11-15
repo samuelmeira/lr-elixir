@@ -1,27 +1,42 @@
-# App artifacts
+# Created by https://www.gitignore.io/api/elixir,phoenix
+# Edit at https://www.gitignore.io/?templates=elixir,phoenix
+
+### Elixir ###
 /_build
-/db
+/cover
 /deps
-/*.ez
-
-# Generated on crash by the VM
+/doc
+/.fetch
 erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
 
-# Generated on crash by NPM
-npm-debug.log
+### Elixir Patch ###
+
+### Phoenix ###
+# gitignore template for Phoenix projects
+# website: http://www.phoenixframework.org/
+#
+# Recommended template: Elixir.gitignore
+
+# Temporary files
+/tmp
 
 # Static artifacts
+/node_modules
 /assets/node_modules
 
-# Since we are building assets from assets/,
+# Since we are building assets from web/static,
 # we ignore priv/static. You may want to comment
 # this depending on your deployment strategy.
 /priv/static/
 
-# Files matching config/*.secret.exs pattern contain sensitive
-# data and you should not commit them into version control.
-#
-# Alternatively, you may comment the line below and commit the
-# secrets files as long as you replace their contents by environment
-# variables.
-/config/*.secret.exs
+# Installer-related files
+/installer/_build
+/installer/tmp
+/installer/doc
+/installer/deps
+
+# End of https://www.gitignore.io/api/elixir,phoenix
